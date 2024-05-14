@@ -1,0 +1,606 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    perspective: 700px  ;
+}
+.container{
+    width: 100%;
+    font-family: "Noto Serif", serif;
+}
+.headbar{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    position: relative;
+}
+.headbar .topbar{
+    width: 100%;
+    border-bottom: 1px solid gray;
+    display:flex;
+    justify-content: space-between;
+    color: #fff;
+    padding: 10px 15px;
+}
+.topbar-1,.topbar-2{
+    display:flex;
+    justify-content: space-between;
+}
+.headbar .topbar i{
+    color: #f5994a;
+}
+.headbar .topbar p:hover{
+    color: #fcb97d;
+}
+.headbar .topbar p:hover i{
+    color: chocolate;
+}
+
+.rotat{
+    position: absolute;
+    top: 55px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f0a50580;
+    background-color: #553f0b;
+    transform: rotate(45deg);
+    z-index: 22;
+    border-right-color:transparent ;
+    border-bottom-color: transparent;
+    visibility: hidden;
+    opacity: 0; 
+    transition: all .4s;
+}
+.div-home{
+    position: relative;
+}
+.navbar table{
+    position: absolute;
+    top: 65px;
+    left: -5px;
+    margin-left: 5px;
+    padding: 3px;
+    width: 500px;
+    text-align: start;
+    font-size: 20px;
+    color: #fff;
+    border: 2px solid #f0a50580;
+    background-color: #553f0b;
+    z-index: 11;
+    transition: all .4s;
+}
+.home-table{
+    visibility: hidden;
+    opacity: 0; 
+    transition: all 1s;
+}
+.navbar ul .div-home:hover .home-table{
+    visibility: visible;
+    opacity: 1; 
+    transition: all .6s;
+}
+.navbar ul .div-home:hover .rotat{
+    visibility: visible;
+    opacity: 1; 
+    transition: all .5s;
+}
+table thead tr th{
+    text-align: start;
+    padding-bottom: 10px;
+    position: relative;
+}
+table thead tr th::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 50%;
+    background-color: inherit;
+    border-bottom: 4px dotted #f5994a ;
+    visibility: visible;
+    opacity: 1;
+}
+
+.headbar .topbar .info{
+    margin-right: 25px;
+    font-size: 19px;
+}
+.headbar .navbar{
+    width: 100%;
+    padding: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.headbar .navbar img{
+    width: 8%;
+    height: 80px;
+}
+.headbar .navbar img:hover{
+    transform: rotatey(360deg);
+    transition: 1s;
+}
+.headbar .navbar .navbar-list{
+    padding-top: 20px;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.headbar .navbar .navbar-list li{
+    list-style: none;
+    padding: 5px 15px;
+    position: relative;
+    box-sizing: border-box;
+    outline: none;
+    border: 3px solid chocolate;
+    height: fit-content;
+}
+
+.headbar .navbar .navbar-list li::after{
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: -6px;
+    width: 110%;
+    height: 30%;
+    visibility: visible;
+    background-color: #000;
+    transition: .7s;
+}
+.headbar .navbar .navbar-list li:hover::after{
+    width: 0;
+    left: 50%;
+    visibility: hidden;
+}
+.headbar .navbar .navbar-list li::before{
+    content: "";
+    position: absolute;
+    left: -6px;
+    bottom: -6px;
+    width: 110%;
+    height: 30%;
+    visibility: visible;
+    background-color: #000;
+    transition: .7s;
+}
+.headbar .navbar .navbar-list li:hover::before{
+    width: 0;
+    left: 50%;
+    visibility: hidden;
+}
+
+.navbar-list i{
+    padding-top: 10px;
+    color: #f5994a;
+    font-size: 30px;
+}
+.cart{
+    position: relative;
+}
+.num-cart{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #423409;
+    color: #F9C183;
+    text-align: center;
+}
+
+
+.headbar .navbar .navbar-list a{
+    text-decoration: none;
+    display: block;
+    color: #f5994a;
+    height: fit-content;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.headbar .navbar .navbar-list li:hover{
+    color: chocolate;
+}
+.headbar .navbar .navbar-list a i:hover{
+    color: chocolate;
+}
+.headbar .headbar-text{
+    background-image:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url(../img/home_bg.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 90%;
+    height: 77%;
+    margin: auto;
+    
+}
+.headbar .headbar-text .headbar-text-info{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.headbar .headbar-text span{
+    color:  rgb(247, 107, 7);
+}
+.headbar .headbar-text .adress{
+    text-align: center;
+    color: #fff;
+    font-size: 38px;
+}
+.headbar .headbar-text .descraption{
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 16px;
+}
+.headbar .book-table-btn{
+    padding: 15px 25px;
+    border: 2px solid  rgb(247, 107, 7);
+    font-size: 20px;
+    background-color: inherit;
+    color: #F9C183;
+    margin-top: 50px;
+    font-weight: 900;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 1s;
+}
+.headbar .book-table-btn::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    transition: 1s;
+    background-color: #F9C183;
+    border-radius: 50% 50% 0 0;
+    z-index: -1;
+
+}
+.headbar .book-table-btn:hover::before{
+    height: 180%;
+}
+.headbar .book-table-btn:hover{
+    color:  rgb(247, 107, 7);
+    transition: .7s;
+}
+/* //////////////////// /////////// special category ///////////////////*/
+.section-header{
+    color: #000;
+    font-size: 46px;
+    margin: 20px auto 40px auto;
+    width: 35%;
+    padding: 10px 0;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+}
+.section-header::after{
+    content: "";
+    position: absolute;
+    left: 35%;
+    bottom: 0;
+    width: 20%;
+    height: 3px;
+    background-color: #f5994a;
+    transition: 1s;
+}
+.section-header:hover::after{
+    width: 40%;
+    left: 25%;
+}
+
+.special-btn{
+    position: absolute;
+    margin-left: auto;
+    top: 310px;
+    right: 0;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+    background-color: #555;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+}
+.special-category{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cards{
+    position: relative;
+    width: 24%;
+    height: 360px;
+}
+.cards:hover .special-btn{
+    opacity: 1;
+    visibility: visible;
+}
+.Catecory .cards:hover{
+    box-shadow: 5px 5px 3px 3px #000;
+    transition: .5s;
+}
+.cards img{
+    width: 100%;
+    height: 70%;
+}
+
+.special-card-info{
+    padding-top: 30px;
+}
+.special-card-info p{
+    padding-bottom: 10px;
+    color: #adacac;
+}
+/* -------------------------------------------------- */
+.marketing{
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.div11{
+    width: 50%;
+    padding-bottom: 20px;
+    background-color: #685323;
+}
+.div11-info{
+    display: inline-block;
+    padding: 10px 0 10px  15px;
+}
+.div11-info p{
+    color: #eee;
+    letter-spacing: 1px;
+}
+.div11 h2{
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+}
+.div11 i{
+    font-size: 70px;
+    color: #f5994a;
+    padding-left: 15px;
+}
+.div11 .text{
+    padding: 15px 0 15px 20px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: #b0b0b0;
+}
+.spans{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 200px;
+    height: 3px;
+}
+.spans span{
+    margin-left: 10px;
+    background-color: #f5994a;
+    width: 60px;
+    height: 3px;
+}
+.div22{
+    width: 23%;
+    background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.3)), url(../img/gallery3.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 25px 0 0 25px;
+    transition: .2s;
+}
+.div33{
+    width: 23%;
+    background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.3)), url(../img/gallery4.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 25px 0 0 25px;
+    transition: .2s;
+}
+.div22:hover ,.div33:hover{
+    transform: scale(1.07);
+    box-shadow: 1px 1px 8px 5px #f5994a inset ;
+
+}
+.div22 h2{
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+}
+.div22 p{
+    color: #f5994a;
+    font-size: 24px;
+}
+.div33 h2{
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+}
+.div33 p{
+    color: #f5994a;
+    font-size: 24px;
+}
+/* -------------------------------------- */
+.free-delivery{
+    width: 90%;
+    margin: auto;
+    border-bottom: 3px solid gray;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    perspective: 800px;
+    perspective-origin: 50%;
+}
+.free-delivery .cards{
+    width: 20%;
+    height: 20%;
+    transition: all .5s;
+    border-right: 3px solid gray;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.free-delivery .cards h2{
+    color: #f5994a;
+}
+.free-delivery .cards p{
+    color: #a86932;
+}
+.free-delivery .cards i{
+    font-size: 50px;
+    margin: auto;
+}
+.free-icons{
+    position: relative;
+    transform-style: preserve-3d;
+    text-align: center;
+    height: 80px;
+    width: 100px;
+    padding: 10px 0 10px 80px;
+    transition: .3s;
+}
+
+.free-icon-font{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    transform: translateZ(50px);
+    transition: .3s;
+}
+.free-icon-top{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    transform: rotateX(-270deg) translatey(-25px) ;
+    transform-origin: 100% 0;
+    transition: .3s;
+}
+.free-icon-top i{
+    color: #f5994a;
+}
+.free-delivery .cards:hover .free-icons{
+    transform: rotatex(-90deg);
+    transition: .3s;
+}
+/* /////////////////////////////// Featured Products /////////////////////// */
+.productes{
+    width: 90%;
+    margin: auto;
+}
+.nav-productes{
+    width: 70%;
+    margin: auto;
+}
+.nav-productes ul{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+.nav-productes ul li{
+    list-style: none;
+    font-size: 28px;
+    color: #333;
+}
+.card-productes{
+    width: 90%;
+    margin: 25px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card-productes .cards{
+    width: 30%;
+    height: 500px;
+    margin-top: 20px;
+}
+.card-productes .cards img{
+    width: 100%;
+    height: 100%;
+}
+.card-productes .cards h3{
+    font-size: 24px;
+    color: #555;
+}
+.card-productes .cards p{
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+.card-productes .cards .productes-icon{
+    display: flex;
+    flex-direction: row;
+}
+.card-productes .cards .productes-icon i{
+    font-size: 16px;
+    color: yellow;
+    padding: 8px 0;
+}
+#icon{
+    color: gray;
+}
+.cards-rotate{
+    position: relative;
+    height: 80%;
+    transform-style: preserve-3d;
+    transition: 2s;
+}
+.cards-rotate-front{
+    width: 100%;
+    height: 100%; 
+    position: absolute;
+    backface-visibility: hidden;
+    transition: 2s;
+    z-index: 1;
+}
+.cards-rotate-back{
+    position: absolute;
+    background-color: #382b08;
+    transform: rotateY(180deg);
+    transition: 2s;
+    width: 100%;
+    height: 100%;
+}
+.cards-rotate-back h2{
+    color: #fff;
+    padding: 15px;
+}
+.cards-rotate:hover{
+    transform: rotateY(180deg);
+    transition: 2s;
+}
+.cards-rotate-back-icons{
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.cards-rotate-back-icons i{
+    font-size: 28px;
+    color: #ecb00d8a;
+    transition: .7s;
+}
+.cards-rotate-back-icons i:hover{
+    color: #d9a618;
+    transform: scale(1.3);
+    transition: .7s;
+}
